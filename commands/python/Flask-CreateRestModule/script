@@ -1,0 +1,9 @@
+#!/bin/bash
+
+module=${1}
+
+mkdir src/Infraestructure/Web/Flask/rest/$module
+cp -r $DOTFILES_PATH/commands/python/Flask-CreateRestModule/code/* src/Infraestructure/Web/Flask/rest/$module
+
+sed -i 's/${module_name}/'$module'/g' src/Infraestructure/Web/Flask/rest/$module/register_blueprint.py
+sed -i 's/${module_name}/'$module'/g' src/Infraestructure/Web/Flask/rest/$module/get/example.py
