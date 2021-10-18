@@ -1,0 +1,10 @@
+python
+
+Name:
+functools
+
+Description:
+functools
+
+@cache
+@total_ordering
